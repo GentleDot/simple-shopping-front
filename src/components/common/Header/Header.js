@@ -36,7 +36,7 @@ const Header = () => {
                     <Typography variant='h6' className={classes.title}>
                         Simple-Shopping
                     </Typography>
-                    <Button color='inherit'>Home</Button>
+                    <Button color='inherit'>로그인</Button>
                 </Toolbar>
             </AppBar>
         </div>
