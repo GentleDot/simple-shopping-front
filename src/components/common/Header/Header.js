@@ -3,36 +3,40 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
-import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
-import makeStyles from "@material-ui/core/styles/makeStyles";
+import makeStyles from '@material-ui/core/styles/makeStyles';
+import {Avatar} from '@material-ui/core';
+import logo from '../../../static/images/gentledot.png';
 
 const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
     },
-    menuButton: {
-        marginRight: theme.spacing(2),
-    },
     title: {
         flexGrow: 1,
     },
+    small: {
+        width : '2em',
+        height : '2em',
+    },
+    large: {
+        width: theme.spacing(5),
+        height: theme.spacing(5),
+        marginRight: '0.5em',
+    }
 }));
 
 const Header = () => {
     const classes = useStyles();
 
     return (
-        <div className="header">
-            <AppBar position="relative">
+        <div className='header'>
+            <AppBar position='relative'>
                 <Toolbar>
-                    <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-                        <MenuIcon/>
-                    </IconButton>
-                    <Typography variant="h6" className={classes.title}>
-                        Gentledot
+                    <Avatar alt='Gentledot' className={classes.large} src={logo} />
+                    <Typography variant='h6' className={classes.title}>
+                        Simple-Shopping
                     </Typography>
-                    <Button color="inherit">Home</Button>
+                    <Button color='inherit'>Home</Button>
                 </Toolbar>
             </AppBar>
         </div>
