@@ -8,6 +8,7 @@ const useStyles = makeStyles((theme) => ({
         backgroundColor: theme.palette.background.default,
         padding: theme.spacing(1),
         textAlign: 'right',
+        fontSize: '6px',
     }
 }));
 
