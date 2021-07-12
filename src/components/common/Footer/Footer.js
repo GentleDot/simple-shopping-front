@@ -1,6 +1,7 @@
 import React from 'react';
 import {BottomNavigation, BottomNavigationAction, makeStyles, Typography} from "@material-ui/core";
 import {HomeOutlined, MenuBookOutlined, PeopleAltOutlined} from "@material-ui/icons";
+import {default as Copylight } from '../Copyright'
 
 const useStyles = makeStyles((theme) => ({
     madeBy: {
@@ -29,8 +30,8 @@ const Footer = () => {
                 <BottomNavigationAction label='회원정보' icon={<PeopleAltOutlined/>}/>
                 <BottomNavigationAction label='상품정보' icon={<MenuBookOutlined/>}/>
             </BottomNavigation>
-            <div>
-                <Typography className={classes.madeBy} variant='subtitle2'> created by gentledot </Typography>
+            <div align={'right'}>
+                <Copylight/>
             </div>
         </>
     );
